@@ -1,0 +1,15 @@
+l1:
+  nodes: 3
+  features: 2
+l2:
+  nodes: 2
+  features: 3
+l3:
+  nodes: 1
+  features: 2
+  
+train:
+  epochs: 10
+  lr: 0.0002
+  batch_perc: 0.084   # in percentage 0.08 = 8 percent of total train_data
+
