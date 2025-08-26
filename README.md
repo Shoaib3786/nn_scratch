@@ -23,13 +23,13 @@ If you notice repeating or stagnant patterns in accuracy and loss curves, the is
 
 - A common scenario is the “dying ReLU problem.” Since ReLU outputs zero for all negative inputs, neurons can get stuck outputting zero and never recover.
 
-How to detect this:
-  - Print or plot the weights/activations of each layer during training. If many neurons are inactive (constant zero), you likely have dead units.
+    - How to detect this:
+    Print or plot the weights/activations of each layer during training. If many neurons are inactive (constant zero), you likely have dead units.
 
-Possible fixes:
-  - Use variations of ReLU such as Leaky ReLU, Parametric ReLU (PReLU), or ELU, which allow small gradients for negative values.
+    - Possible fixes:
+    Use variations of ReLU such as Leaky ReLU, Parametric ReLU (PReLU), or ELU, which allow small gradients for negative values.
 
-5. Debugging tips
+4. Debugging tips
 
 - Plot loss, accuracy, and weight values over epochs. If weights stay almost the same, learning isn’t happening.
 - Print sample gradients per layer to ensure they’re flowing backward correctly.
