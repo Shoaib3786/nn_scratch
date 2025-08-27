@@ -1,5 +1,16 @@
 # nn_scratch
 
+### How to experiment in this neural nets?
+ step-1 Clone the repo
+ step-2 Config/param.yaml change parameters according to your need for training
+         if: want to add more layers, 
+         then: 1) Add in the similar manner as that of previous layers in param.yaml
+               2) And then update the changes in script/train.py file.
+
+ step-3 run script/train.py --> for traning
+ step-4 run script/visualize.py --> for graphical plots and video animation.
+
+
 ## My Learning in this project:
 ### Why accuracy and loss may show repetitive patterns?
 
