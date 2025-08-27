@@ -8,6 +8,7 @@ from src.accuracy_metric import Accuracy
 from src.data import DataGen
 import argparse
 import yaml
+import pickle
 
 
 def main():
@@ -144,3 +145,14 @@ if __name__ == "__main__":
     batchsize_perc = cfg["train"]["batch_perc"]
 
     main()
+
+    # After training loop
+    logs = {
+        "loss_history": loss_history,
+        "accuracy_history": accuracy_history,
+        "weights_history": weights_history,
+    }
+
+    with open("training_logs.pkl", "wb") as f:
+      pickle.dump(logs, f)
+
